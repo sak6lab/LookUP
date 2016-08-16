@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LookUP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,96 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky-8" translatesAutoresizingMaskIntoConstraints="NO" id="5TE-ZP-8Zx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="4Cd-VK-Z1w"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4z3-ou-1OK">
+                                <rect key="frame" x="20" y="80" width="560" height="512"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DayCell" rowHeight="74" id="Bkd-yt-loz" customClass="DayCell" customModule="LookUP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="74"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bkd-yt-loz" id="W7h-zI-Oev">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="74"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teS-dc-UNW">
+                                                    <rect key="frame" x="8" y="8" width="101" height="57.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="101" id="THK-v2-1Sk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="01r-eb-HWG">
+                                                    <rect key="frame" x="117" y="3" width="65" height="65.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnT-el-Sgd">
+                                                    <rect key="frame" x="190" y="8" width="341" height="57.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="teS-dc-UNW" firstAttribute="leading" secondItem="W7h-zI-Oev" secondAttribute="leadingMargin" id="4UO-nP-sOS"/>
+                                                <constraint firstItem="teS-dc-UNW" firstAttribute="bottom" secondItem="W7h-zI-Oev" secondAttribute="bottomMargin" id="90X-FH-XFs"/>
+                                                <constraint firstItem="teS-dc-UNW" firstAttribute="top" secondItem="W7h-zI-Oev" secondAttribute="topMargin" id="Kdz-KU-jho"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dayDesc" destination="BnT-el-Sgd" id="3yZ-Gw-6CB"/>
+                                            <outlet property="dayLabel" destination="teS-dc-UNW" id="erx-Ob-gma"/>
+                                            <outlet property="weatherImg" destination="01r-eb-HWG" id="HFd-fT-gav"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forecast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF3-Fs-FtN">
+                                <rect key="frame" x="200" y="13" width="200" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="3uT-Hc-eiO"/>
+                                    <constraint firstAttribute="width" constant="200" id="A2K-mj-w3h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5TE-ZP-8Zx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1c2-js-fdv"/>
+                            <constraint firstItem="4z3-ou-1OK" firstAttribute="top" secondItem="5TE-ZP-8Zx" secondAttribute="bottom" constant="8" id="4Od-ZY-sX7"/>
+                            <constraint firstItem="4z3-ou-1OK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CLf-qU-eG7"/>
+                            <constraint firstItem="PF3-Fs-FtN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hkx-vF-pbv"/>
+                            <constraint firstItem="5TE-ZP-8Zx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Rbk-gL-qug"/>
+                            <constraint firstItem="PF3-Fs-FtN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cfB-6v-JnA"/>
+                            <constraint firstItem="4z3-ou-1OK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dcw-2r-yY7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4z3-ou-1OK" secondAttribute="bottom" constant="8" id="kHK-8i-787"/>
+                            <constraint firstAttribute="trailing" secondItem="5TE-ZP-8Zx" secondAttribute="trailing" id="kLK-by-7zv"/>
+                            <constraint firstItem="PF3-Fs-FtN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="13" id="lKx-ti-baW"/>
+                            <constraint firstItem="PF3-Fs-FtN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tlk-0p-spm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Hkx-vF-pbv"/>
+                                <exclude reference="cfB-6v-JnA"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="309" y="325"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sky-8" width="400" height="300"/>
+    </resources>
 </document>
