@@ -16,3 +16,5 @@ let API_KEY = "c8f26c86953575b500bd0c1eff6f56de"
 let urlBase = "http://api.openweathermap.org/data/2.5/"
 
 let urlForcast = "forecast?"
+
+typealias downloadComplete =  () -> ()

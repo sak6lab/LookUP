@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9174A61809F4108C8283AB48 /* Pods_LookUP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E84BF4C1D7F93661AD04CDA /* Pods_LookUP.framework */; };
 		F55BD03E1D634AAF00E53DAD /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55BD03D1D634AAF00E53DAD /* DayCell.swift */; };
 		F55BD0401D634B1200E53DAD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55BD03F1D634B1200E53DAD /* Constants.swift */; };
 		F55BD0421D634CE500E53DAD /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55BD0411D634CE500E53DAD /* Day.swift */; };
+		F55BD0451D63576E00E53DAD /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55BD0441D63576E00E53DAD /* Week.swift */; };
 		F5B713A11D60360D009B20DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B713A01D60360D009B20DD /* AppDelegate.swift */; };
 		F5B713A31D60360D009B20DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B713A21D60360D009B20DD /* ViewController.swift */; };
 		F5B713A61D60360D009B20DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B713A41D60360D009B20DD /* Main.storyboard */; };
@@ -19,9 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E3DEE516A32701852A6824F /* Pods-LookUP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookUP.release.xcconfig"; path = "Pods/Target Support Files/Pods-LookUP/Pods-LookUP.release.xcconfig"; sourceTree = "<group>"; };
+		3E84BF4C1D7F93661AD04CDA /* Pods_LookUP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LookUP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8141D678D3933BE81C7AE1F8 /* Pods-LookUP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookUP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LookUP/Pods-LookUP.debug.xcconfig"; sourceTree = "<group>"; };
 		F55BD03D1D634AAF00E53DAD /* DayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		F55BD03F1D634B1200E53DAD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F55BD0411D634CE500E53DAD /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		F55BD0441D63576E00E53DAD /* Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		F5B7139D1D60360D009B20DD /* LookUP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookUP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B713A01D60360D009B20DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5B713A21D60360D009B20DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,12 +43,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9174A61809F4108C8283AB48 /* Pods_LookUP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12CEAB769F6906D9BE3D9B41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E84BF4C1D7F93661AD04CDA /* Pods_LookUP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F55BD0431D63532100E53DAD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +71,8 @@
 			children = (
 				F5B7139F1D60360D009B20DD /* LookUP */,
 				F5B7139E1D60360D009B20DD /* Products */,
+				FFB6196346A2A5A5CB5ED3AB /* Pods */,
+				12CEAB769F6906D9BE3D9B41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +105,7 @@
 			children = (
 				F5B713B51D6096CD009B20DD /* Weather.swift */,
 				F55BD0411D634CE500E53DAD /* Day.swift */,
+				F55BD0441D63576E00E53DAD /* Week.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -108,6 +126,15 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		FFB6196346A2A5A5CB5ED3AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8141D678D3933BE81C7AE1F8 /* Pods-LookUP.debug.xcconfig */,
+				2E3DEE516A32701852A6824F /* Pods-LookUP.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5B713AF1D60360D009B20DD /* Build configuration list for PBXNativeTarget "LookUP" */;
 			buildPhases = (
+				10A34F158FE1C552E5A8D74D /* [CP] Check Pods Manifest.lock */,
 				F5B713991D60360D009B20DD /* Sources */,
 				F5B7139A1D60360D009B20DD /* Frameworks */,
 				F5B7139B1D60360D009B20DD /* Resources */,
+				A67DE5C85052D3352D12FDC3 /* [CP] Embed Pods Frameworks */,
+				69A5BB1A9A3388D148DCFD4A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,6 +204,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10A34F158FE1C552E5A8D74D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69A5BB1A9A3388D148DCFD4A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LookUP/Pods-LookUP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A67DE5C85052D3352D12FDC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LookUP/Pods-LookUP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5B713991D60360D009B20DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -181,6 +259,7 @@
 			files = (
 				F55BD0401D634B1200E53DAD /* Constants.swift in Sources */,
 				F5B713A31D60360D009B20DD /* ViewController.swift in Sources */,
+				F55BD0451D63576E00E53DAD /* Week.swift in Sources */,
 				F55BD0421D634CE500E53DAD /* Day.swift in Sources */,
 				F5B713B61D6096CD009B20DD /* Weather.swift in Sources */,
 				F55BD03E1D634AAF00E53DAD /* DayCell.swift in Sources */,
@@ -297,6 +376,7 @@
 		};
 		F5B713B01D60360D009B20DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8141D678D3933BE81C7AE1F8 /* Pods-LookUP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LookUP/Info.plist;
@@ -308,6 +388,7 @@
 		};
 		F5B713B11D60360D009B20DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E3DEE516A32701852A6824F /* Pods-LookUP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LookUP/Info.plist;

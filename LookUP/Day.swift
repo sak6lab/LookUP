@@ -9,21 +9,23 @@
 import Foundation
 
 class Day {
-    private var _weatherImgId: String!
-    private var _dt: String!
-    private var _desc: String!
-    private var _dayOfTheWeek: String!
+    private var _temp: String
+    private var _dayOfTheWeek: NSInteger
+    private var _humidity: String
+    private var _precipitation: String
+    private var _weatherImgId: String
+    private var _desc: String
     
-    var weatherImgId: String{
-        return _weatherImgId
+    
+    init(temp: String, dayOfTheWeek: NSInteger, humidity: String, precipitation: String, weatherImgId: String, desc: String){
+        self._temp = temp
+        self._dayOfTheWeek = dayOfTheWeek
+        self._humidity = humidity
+        self._precipitation = precipitation
+        self._weatherImgId = weatherImgId
+        self._desc = desc
+        
     }
     
-    var desc: String{
-        return _desc
-    }
-    
-    var dayOfTheWeek: String{
-        return _dayOfTheWeek
-    }
     
 }

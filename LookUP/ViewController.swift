@@ -7,12 +7,48 @@
 //
 
 import UIKit
+import MapKit
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
 
-class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-
+    var week: Week!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let locationManager = CLLocationManager()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        
+        
+    }
+    override func viewDidAppear(animated: Bool) {
+        let locationManager = CLLocationManager()
+        
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        
+        if CLLocationManager.authorizationStatus() != .AuthorizedWhenInUse {
+            locationManager.requestWhenInUseAuthorization()
+        }
+
+
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue = manager.location!.coordinate
+        self.week = Week(lat: "\(locValue.latitude)", lon: "\(locValue.longitude)")
+        week.downloadWeekDetails { () -> () in
+            print("complete")
+        }
+
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

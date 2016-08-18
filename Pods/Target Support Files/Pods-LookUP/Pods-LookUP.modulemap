@@ -1,0 +1,6 @@
+framework module Pods_LookUP {
+  umbrella header "Pods-LookUP-umbrella.h"
+
+  export *
+  module * { export * }
+}
