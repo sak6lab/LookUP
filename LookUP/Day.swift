@@ -9,12 +9,12 @@
 import Foundation
 
 class Day {
-    private var _temp: String
-    private var _dayOfTheWeek: NSInteger
-    private var _humidity: String
-    private var _precipitation: String
-    private var _weatherImgId: String
-    private var _desc: String
+    fileprivate var _temp: String
+    fileprivate var _dayOfTheWeek: NSInteger
+    fileprivate var _humidity: String
+    fileprivate var _precipitation: String
+    fileprivate var _weatherImgId: String
+    fileprivate var _desc: String
     
     
     init(temp: String, dayOfTheWeek: NSInteger, humidity: String, precipitation: String, weatherImgId: String, desc: String){

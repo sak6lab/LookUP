@@ -16,7 +16,39 @@
             startingLineNumber = "48"
             endingLineNumber = "48"
             landmarkName = "locationManager(_:didUpdateLocations:)"
-            landmarkType = "5">
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LookUP.ViewController.locationManager (__ObjC.CLLocationManager, didUpdateLocations : Swift.Array&lt;__ObjC.CLLocation&gt;) -&gt; ()"
+                  moduleName = "LookUP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/SakethDargula1/Desktop/LookUP/LookUP/ViewController.swift"
+                  timestampString = "519570611.915649"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "681">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LookUP.ViewController.(locationManager (__ObjC.CLLocationManager, didUpdateLocations : Swift.Array&lt;__ObjC.CLLocation&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "LookUP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/SakethDargula1/Desktop/LookUP/LookUP/ViewController.swift"
+                  timestampString = "519570611.918614"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -32,7 +64,7 @@
             startingLineNumber = "47"
             endingLineNumber = "47"
             landmarkName = "locationManager(_:didUpdateLocations:)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

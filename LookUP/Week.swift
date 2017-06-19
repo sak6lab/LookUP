@@ -21,10 +21,10 @@ class Week {
         self.lat = lat
         self.lon = lon
     }
-    func downloadWeekDetails(complete: downloadComplete){
+    func downloadWeekDetails(_ complete: @escaping downloadComplete){
         let urlstr = "\(urlBase)\(urlForcast)lat=\(lat)&lon=\(lon)&units=imperial&appid=\(API_KEY)"
-        let url = NSURL(string: urlstr)!
-        Alamofire.request(.GET,url).responseJSON {(response:Response<AnyObject, NSError>) in
+        let url = URL(string: urlstr)!
+        Alamofire.request(url).responseJSON{ response in 
             let result = response.result
             
             if let dict = result.value as? Dictionary<String, AnyObject> {
@@ -45,11 +45,11 @@ class Week {
                     
                     for interval in list {
                         if let dt = interval["dt_txt"] as? String{
-                            let dateFormatter = NSDateFormatter()
+                            let dateFormatter = DateFormatter()
                             dateFormatter.dateFormat = "yyyy-MM-dd"
-                            if let date = dateFormatter.dateFromString(dt){
-                                let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-                                let myComponents = myCalendar.components(.Weekday, fromDate: date )
+                            if let date = dateFormatter.date(from: dt){
+                                let myCalendar = Calendar(identifier: Calendar.Identifier.gregorian)
+                                let myComponents = (myCalendar as NSCalendar).components(.weekday, from: date )
                                 _dayOfTheWeek = myComponents.weekday
                             }
                         }
